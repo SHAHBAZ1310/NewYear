@@ -3,6 +3,7 @@ package shaz.com.newyear;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -110,7 +111,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         }, 1000, 500);
 
-mTimerLeft.scheduleAtFixedRate(new TimerTask() {
+        mTimerLeft.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 mHeartLayoutRight.post(new Runnable() {
@@ -146,6 +147,7 @@ mTimerLeft.scheduleAtFixedRate(new TimerTask() {
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -397,7 +399,10 @@ mTimerLeft.scheduleAtFixedRate(new TimerTask() {
             showProgress(false);
 
             if (success) {
-                Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Success my love...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, ScrollingActivity.class);
+                startActivity(intent);
+
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

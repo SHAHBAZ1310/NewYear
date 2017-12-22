@@ -27,7 +27,7 @@
             android:layout_height="30dp"
             android:visibility="visible"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/navigation_drawer_icon"></ImageView>
+            android:src="@drawable/burger_icon"></ImageView>
 
 
 

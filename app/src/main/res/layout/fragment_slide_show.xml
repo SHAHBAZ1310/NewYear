@@ -1,13 +1,33 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="shaz.com.newyear.fragment.SlideShowFragment">
+    <!--  TODO: Update blank fragment layout  -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop" />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hellooooooooooo" />
+        android:layout_below="@+id/image"
+        android:background="@color/black">
+        <shaz.com.newyear.customviews.CustomTextView
+            android:id="@+id/quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:textfont="Allura-Regular.otf"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:text="Hi"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dimen_20dp" />
 
-</FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

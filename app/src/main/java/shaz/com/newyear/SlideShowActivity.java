@@ -26,9 +26,11 @@ public class SlideShowActivity extends MainActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setMyContentView(R.layout.activity_slide_show);
+
         mToolbar = findViewById(R.id.toolbar);
         mIvBackIcon = findViewById(R.id.ivBackIcon);
         mTvTitleToolbar = findViewById(R.id.tvTitleToolbar);
+        mTvTitleToolbar.setText("Sweet Slideshow");
         mViewPager = findViewById(R.id.viewPager);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(adapterViewPager);
@@ -45,7 +47,7 @@ public class SlideShowActivity extends MainActivity implements View.OnClickListe
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
-        private static int NUM_ITEMS = 7;
+        private static int NUM_ITEMS = 9;
 
         public MyPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
@@ -79,6 +81,12 @@ public class SlideShowActivity extends MainActivity implements View.OnClickListe
 
                 case 6: // Fragment # 1 - This will show SecondFragment
                     return SlideShowFragment.newInstance(6, "Page # 3");
+
+                case 7: // Fragment # 1 - This will show SecondFragment
+                    return SlideShowFragment.newInstance(7, "Page # 3");
+
+                case 8: // Fragment # 1 - This will show SecondFragment
+                    return SlideShowFragment.newInstance(8, "Page # 3");
 
 
                 default:

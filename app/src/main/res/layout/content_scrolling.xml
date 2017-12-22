@@ -8,10 +8,13 @@
     tools:context="shaz.com.newyear.ScrollingActivity"
     tools:showIn="@layout/activity_scrolling">
 
-    <TextView
+    <shaz.com.newyear.customviews.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        app:textfont="Allura-Regular.otf"
         android:text="@string/large_text" />
 
 </android.support.v4.widget.NestedScrollView>

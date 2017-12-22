@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="shaz.com.newyear.FavoritePlacesActivity">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvDemoTabs"
+    android:background="@color/black"
+    tools:context="shaz.com.newyear.ThenYearsActivity">
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
-    </android.support.v7.widget.RecyclerView>
+        android:src="@drawable/ten_years"
+        android:scaleType="fitCenter"
+        />
 </android.support.constraint.ConstraintLayout>
